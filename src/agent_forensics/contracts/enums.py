@@ -1,0 +1,1 @@
+"""Shared enumeration placeholder."""

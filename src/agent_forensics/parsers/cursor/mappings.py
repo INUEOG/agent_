@@ -1,0 +1,1 @@
+"""Cursor field mappings placeholder."""

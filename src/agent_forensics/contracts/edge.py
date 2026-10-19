@@ -1,0 +1,1 @@
+"""Graph-edge contract placeholder."""

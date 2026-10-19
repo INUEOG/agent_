@@ -1,0 +1,1 @@
+"""Parser result contract placeholder."""

@@ -1,0 +1,1 @@
+"""Report entry point placeholder."""

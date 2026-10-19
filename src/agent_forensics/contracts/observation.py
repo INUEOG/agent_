@@ -1,0 +1,1 @@
+"""Independent-observation contract placeholder."""

@@ -1,0 +1,1 @@
+"""Target-entity extraction placeholder."""

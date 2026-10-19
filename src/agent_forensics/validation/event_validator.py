@@ -1,0 +1,1 @@
+"""Canonical event validation placeholder."""

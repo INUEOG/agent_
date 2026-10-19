@@ -1,0 +1,1 @@
+"""Canonical event-classification placeholder."""

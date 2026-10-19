@@ -1,0 +1,84 @@
+<<<<<<< HEAD
+.env
+__pycache__/
+*.py[cod]
+.pytest_cache/
+data/cases/*
+!data/cases/.gitkeep
+data/extracted/*
+!data/extracted/.gitkeep
+data/parsed/*
+!data/parsed/.gitkeep
+data/evaluation_private/*
+!data/evaluation_private/.gitkeep
+runs/logs/*
+!runs/logs/.gitkeep
+runs/reports/*
+!runs/reports/.gitkeep
+runs/metrics/*
+!runs/metrics/.gitkeep
+runs/temporary/*
+!runs/temporary/.gitkeep
+=======
+# Python bytecode / cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Project generated outputs
+output/
+
+# Logs
+*.log
+
+# Test / coverage cache
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+
+# Type checker / linter cache
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Build / package artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Environment / secret files
+.env
+.env.*
+!.env.example
+
+# IDE / editor settings
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS generated files
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# test files
+tests/dataset
+tests/Antigravity Parser Tests/dataset
+*.tar.gz
+>>>>>>> cd17036268aae244d68436e4fa00ee6ff6dade67

@@ -1,0 +1,1 @@
+"""Codex parser adapter package."""

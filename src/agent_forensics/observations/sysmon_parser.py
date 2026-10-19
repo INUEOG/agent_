@@ -1,0 +1,1 @@
+"""Sysmon observation parser placeholder."""

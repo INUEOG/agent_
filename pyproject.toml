@@ -1,0 +1,21 @@
+[project]
+<<<<<<< HEAD
+name = "ai-agent-forensics"
+version = "0.1.0"
+description = "Evidence-grounded AI coding-agent forensic analysis"
+requires-python = ">=3.11"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+=======
+name = "actf"
+version = "0.1.0"
+description = "AI Coding Tool Forensics parser pipeline for Codex, Cursor, Claude Code, and Antigravity"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai"]
+bedrock = ["boto3"]
+dev = ["pytest>=8.0"]
+>>>>>>> cd17036268aae244d68436e4fa00ee6ff6dade67

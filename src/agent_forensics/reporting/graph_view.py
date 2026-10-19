@@ -1,0 +1,1 @@
+"""Graph-view rendering placeholder."""

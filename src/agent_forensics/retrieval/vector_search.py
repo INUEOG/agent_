@@ -1,0 +1,1 @@
+"""Optional vector-search placeholder."""

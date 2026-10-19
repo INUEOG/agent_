@@ -1,0 +1,1 @@
+"""Observation coverage checking placeholder."""

