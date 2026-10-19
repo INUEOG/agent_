@@ -1,0 +1,33 @@
+schema_version: cursor-target-rules-v0.1
+scope:
+  target_types: [url, domain, ip]
+  resource_types: [file]
+
+extraction_sources:
+  user_and_assistant_messages:
+    event_types: [prompt, transcript_prompt, response, transcript_response]
+    fields: [text]
+    relation: MENTIONS_ENTITY
+  tool_arguments:
+    event_types: [tool_call, mcp_call, transcript_tool_call, skill_call]
+    fields: [command, metadata.argumentsFull, metadata.argumentsPreview, metadata.searchQuery, metadata.paths]
+    relation: REQUESTS_TARGET
+  tool_result_text:
+    event_types: [tool_result, transcript_tool_result]
+    fields: [text]
+    relation: TOOL_OUTPUT_MENTIONS
+    caution: "Recorded output is not independent evidence."
+  file_references:
+    fields: [file_path, file_paths, structured_argument_path_fields]
+    relation: REFERENCES_FILE
+
+normalization:
+  url: "lowercase scheme and host; retain path/query/fragment; do not assume URL was contacted"
+  domain: "lowercase and remove trailing dot; syntax extraction does not prove DNS resolution"
+  ip: "canonicalize with ipaddress; extraction does not prove connectivity"
+  file: "decode file URI, normalize separators, case-fold for identity on Windows, preserve original display value"
+
+noise_controls:
+  - "Do not scan arbitrary workspace files or all Cursor internal logs for targets by default."
+  - "Do not treat configured MCP/skill presence as proof of invocation."
+  - "Do not merge domain/host/IP aliases without explicit DNS, config, command, or independent-log evidence."

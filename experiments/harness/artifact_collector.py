@@ -1,0 +1,1 @@
+"""Experiment artifact collector placeholder."""

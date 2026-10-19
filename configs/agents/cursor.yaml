@@ -1,0 +1,51 @@
+agent: cursor
+parser: parsers.cursor.reconstruct_cursor_artifacts
+parser_contract: actf-parser-result-v1
+native_schema: cursor-behavior-reconstructor-3.2.5
+
+# These are discovered in the uploaded sample. All paths/structures are optional:
+# absence means "not observed in this extraction", not "never existed".
+artifacts:
+  primary_state_db:
+    pattern: "Cursor/User/globalStorage/state.vscdb"
+    tables:
+      composerHeaders:
+        fields: [composerId, workspaceId, createdAt, lastUpdatedAt, isArchived, isSubagent, value]
+      cursorDiskKV:
+        key_prefixes:
+          - "composerData:<composerId>"
+          - "bubbleId:<composerId>:<bubbleId>"
+          - "agentKv:blob:<hash>"
+          - "checkpointId:<composerId>:<checkpointId>"
+  secondary_state_dbs:
+    pattern: "Cursor/User/workspaceStorage/**/state.vscdb"
+    role: "generation records / workspace-specific supporting evidence when present"
+  transcript:
+    pattern: ".cursor/projects/**/agent-transcripts/**/*.jsonl"
+    role: "secondary conversation evidence; may be absent or incomplete"
+  cursor_logs:
+    patterns:
+      - "Cursor/logs/**/Cursor Structured Logs*.log"
+      - "Cursor/logs/**/cursor.requestTraces.log"
+    role: "Cursor-owned logs; NOT independent OS/network telemetry"
+  checkpoints:
+    pattern: "Cursor/User/globalStorage/anysphere.cursor-retrieval/checkpoints/**"
+    role: "Cursor-recorded file state/diff evidence; NOT independent OS telemetry"
+  file_history:
+    pattern: "Cursor/User/History/**"
+    role: "supporting file-history artifacts when present"
+
+identity_fields:
+  session: [session_id, composer_id]
+  bubble: [composer_id, bubble_id]
+  request: [request_id]
+  tool_call: [tool_call_id]
+  checkpoint: [composer_id, checkpointId]
+  file_change: [composer_id, firstEditBubbleId, file_path]
+
+principles:
+  - "Preserve native IDs and source references."
+  - "Do not infer execution from tool-call presence alone."
+  - "Do not infer causality from timestamp proximity alone."
+  - "Do not classify Cursor internal logs, tool outputs, or checkpoints as independent OS evidence."
+  - "Track missing/unsupported/parse-error/absent separately."

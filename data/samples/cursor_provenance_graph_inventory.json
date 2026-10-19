@@ -1,0 +1,47 @@
+{
+  "artifact_scope": "The two Cursor artifact archives uploaded in this conversation; raw archives are not included in this project package.",
+  "graph_schema_version": "cursor-evidence-graph-v0.1",
+  "statistics": {
+    "sessions": 28,
+    "events": 1402,
+    "entities": 118,
+    "nodes": 1548,
+    "edges": 2646,
+    "nodes_by_type": {
+      "checkpoint_record": 10,
+      "cursor_artifact_record": 99,
+      "cursor_internal_log": 1014,
+      "file_change_record": 11,
+      "file_resource": 15,
+      "message_record": 91,
+      "session": 28,
+      "target_entity": 103,
+      "tool_call_record": 97,
+      "tool_result_record": 80
+    },
+    "edges_by_relation": {
+      "ASSOCIATED_FILE_CHANGE_RECORD": 5,
+      "CONTAINS_RECORD": 1322,
+      "CORRELATED_PROMPT_EVIDENCE": 844,
+      "DUPLICATE_RECORD": 1,
+      "HAS_RECORDED_RESULT": 80,
+      "MENTIONS_ENTITY": 56,
+      "REFERENCES_FILE": 86,
+      "REQUESTS_TARGET": 78,
+      "SAME_GENERATION": 15,
+      "TOOL_OUTPUT_MENTIONS": 148,
+      "URL_HOSTS_DOMAIN": 11
+    },
+    "native_links_seen": 945,
+    "native_links_skipped_missing_endpoint": 0,
+    "independent_observations": 0,
+    "note": "Cursor-owned artifacts are recorded evidence, not independent OS/server observations."
+  },
+  "interpretation_limits": [
+    "Counts describe the uploaded extraction only and do not represent all records from a live Cursor installation.",
+    "Cursor-owned logs, messages, tool outputs, and checkpoints are recorded artifacts, not independent OS/network/server observations.",
+    "The graph is a structural first pass; counts do not establish graph precision/recall or causality.",
+    "The preview redacts IDs, entity values, workspace IDs, and source references."
+  ],
+  "test_status": "217 collected: 177 passed, 36 skipped, 4 xfailed in the full repository test suite."
+}

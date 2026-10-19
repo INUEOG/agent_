@@ -1,0 +1,133 @@
+schema_version: cursor-edge-rules-v0.1
+source: parsers.cursor.reconstruct_cursor_artifacts
+
+# Native links emitted by the Cursor parser take precedence over heuristic joins.
+# All edges are non-causal unless a separate rule and independent evidence establish causality.
+rules:
+  - id: cursor-session-membership-v1
+    relation: CONTAINS_RECORD
+    from: session
+    to: cursor_event
+    condition: "event.session_id or event.composer_id matches the session identifier"
+    basis: event.session_id_or_composer_id
+    evidence_status: explicit_session_membership
+    causal: false
+
+  - id: cursor-tool-result-id-binding-v1
+    native_relation: tool_result
+    relation: HAS_RECORDED_RESULT
+    from: tool_call_record
+    to: tool_result_record
+    condition: "native Cursor link endpoints are present; parser basis is same toolCallId"
+    basis: native_link.same_toolCallId
+    evidence_status: identifier_bound
+    causal: false
+    notes: "A recorded tool result is not, by itself, proof of OS-level execution or target-side effect."
+
+  - id: cursor-file-change-association-v1
+    native_relation: file_change
+    relation: ASSOCIATED_FILE_CHANGE_RECORD
+    from: cursor_action_record
+    to: file_change_record
+    condition: "native Cursor parser linked the records via composerId + firstEditBubbleId"
+    basis: native_link.firstEditBubbleId
+    evidence_status: cursor_artifact_correlation
+    causal: false
+    notes: "Do not rename this to FILE_CHANGE_OBSERVED without independent filesystem evidence."
+
+  - id: cursor-prompt-evidence-v1
+    native_relation: prompt_evidence
+    relation: CORRELATED_PROMPT_EVIDENCE
+    from: cursor_event
+    to: cursor_event
+    condition: "native parser found requestId == generationUUID"
+    basis: native_link.requestId_equals_generationUUID
+    evidence_status: cursor_artifact_correlation
+    causal: false
+
+  - id: cursor-same-generation-v1
+    native_relation: same_generation
+    relation: SAME_GENERATION
+    from: cursor_event
+    to: cursor_event
+    condition: "native parser found equal generationUUID"
+    basis: native_link.generationUUID
+    evidence_status: cursor_artifact_correlation
+    causal: false
+
+  - id: cursor-duplicate-record-v1
+    native_relation: duplicate_observation
+    relation: DUPLICATE_RECORD
+    from: cursor_event
+    to: cursor_event
+    condition: "native parser reports the same session and exact prompt/response text hash"
+    basis: native_link.exact_text_hash
+    evidence_status: duplicate_record_candidate
+    causal: false
+
+  - id: cursor-message-mentions-target-v1
+    relation: MENTIONS_ENTITY
+    from: message_record
+    to: target_entity
+    condition: "domain, IP, or URL is extracted from a user/assistant message"
+    basis: exact_value_extraction_from_message
+    evidence_status: recorded_mention
+    assertion: recorded
+    causal: false
+
+  - id: cursor-tool-requests-target-v1
+    relation: REQUESTS_TARGET
+    from: tool_call_record
+    to: target_entity
+    condition: "domain, IP, or URL is extracted from command/tool arguments"
+    basis: exact_value_extraction_from_tool_input
+    evidence_status: recorded_mention
+    assertion: recorded
+    causal: false
+    notes: "This records a requested target; it does not prove successful access."
+
+  - id: cursor-tool-output-mentions-target-v1
+    relation: TOOL_OUTPUT_MENTIONS
+    from: tool_result_record
+    to: target_entity
+    condition: "target string is present in Cursor-recorded tool output"
+    basis: exact_value_extraction_from_tool_output
+    evidence_status: recorded_mention
+    assertion: recorded
+    causal: false
+    notes: "Cursor-recorded output is not independent confirmation."
+
+  - id: cursor-file-reference-v1
+    relation: REFERENCES_FILE
+    from: cursor_event
+    to: file_resource
+    condition: "file path is provided by a structured path/file field"
+    basis: explicit_file_path_field
+    evidence_status: recorded_reference
+    assertion: recorded
+    causal: false
+
+  - id: cursor-url-host-v1
+    relation: URL_HOSTS_DOMAIN
+    from: url_entity
+    to: domain_or_ip_entity
+    condition: "hostname is parsed from a recorded URL authority"
+    basis: url_authority_hostname
+    evidence_status: parsed_from_recorded_URL
+    assertion: recorded
+    causal: false
+
+not_allowed_without_independent_evidence:
+  - "EXECUTED"
+  - "FILE_CHANGE_OBSERVED"
+  - "NETWORK_ACTIVITY_OBSERVED"
+  - "SERVER_REQUEST_OBSERVED"
+  - "TARGET_EFFECT_OBSERVED"
+  - "CAUSED_BY"
+
+independent_observation_sources_expected_later:
+  - Sysmon
+  - Procmon
+  - packet_capture
+  - test_server_access_log
+  - independent_test_harness
