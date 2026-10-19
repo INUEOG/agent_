@@ -1,0 +1,66 @@
+# Python bytecode and caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.tox/
+.nox/
+.mypy_cache/
+.ruff_cache/
+.pyre/
+.pytype/
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Build/package artifacts
+build/
+dist/
+*.egg-info/
+.eggs/
+
+# Secrets and environment files
+.env
+.env.*
+!.env.example
+
+# IDE / OS files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Runtime output and evidence; never commit case material
+output/
+data/cases/*
+!data/cases/.gitkeep
+data/extracted/*
+!data/extracted/.gitkeep
+data/parsed/*
+!data/parsed/.gitkeep
+data/evaluation_private/*
+!data/evaluation_private/.gitkeep
+runs/logs/*
+!runs/logs/.gitkeep
+runs/reports/*
+!runs/reports/.gitkeep
+runs/metrics/*
+!runs/metrics/.gitkeep
+runs/temporary/*
+!runs/temporary/.gitkeep
+*.log
+
+# Local test datasets and archives
+tests/dataset/
+tests/Antigravity Parser Tests/dataset/
+*.tar.gz

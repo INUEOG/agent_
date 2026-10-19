@@ -1,0 +1,15 @@
+[project]
+name = "ai-agent-forensics"
+version = "0.1.0"
+description = "Evidence-grounded forensic analysis of heterogeneous AI coding-agent artifacts"
+requires-python = ">=3.11"
+dependencies = []
+
+[project.optional-dependencies]
+openai = ["openai"]
+bedrock = ["boto3"]
+dev = ["pytest>=8.0"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
